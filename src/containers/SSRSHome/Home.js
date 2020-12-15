@@ -30,13 +30,12 @@ class SSRSHome extends Component {
               <main className="main" style={{backgroundImage: `url(${image1})`,height:"872px"}}>
                 <div style={{height:"872px",backgroundColor:"#12202f",opacity:"0.9"}}>
                   <div className="row" style={{marginLeft:"35%"}}> 
-                    <h1 style={{color:"white",marginTop:"16%",marginBottom:"3%"}}>Smart Synopsis Review System</h1>
+                    <h1 style={{color:"white",marginTop:"16%",marginBottom:"3%"}}>Smart Assignment Review System</h1>
                     <h3></h3>
                   </div>
-                  <div className="row">
-                    <div className="col-md-3"></div>
-                    <div className="col-md-2">
-                      <div className="card" style={{width: "18rem"}}>
+                  <div className="row" style={{width:"100%",padding:"0px 10%"}}>
+                    <div style={{width:"30%"}}>
+                      <div className="card" >
                         <img className="card-img-top" height="200px" src={image4} alt="Card image cap"/>
                         <div className="card-body">
                           <h5 className="card-title">Student Portal</h5>
@@ -50,8 +49,8 @@ class SSRSHome extends Component {
                         </div>
                       </div>
                     </div>
-                    <div className="col-md-2">
-                    <div className="card" style={{width: "18rem"}}>
+                    <div style={{width:"30%",marginLeft:"5%"}}>
+                    <div className="card" >
                         <img className="card-img-top" height="200px" src={image3} alt="Card image cap"/>
                         <div className="card-body">
                           <h5 className="card-title">Faculty Poratl</h5>
@@ -62,8 +61,8 @@ class SSRSHome extends Component {
                         </div>
                       </div>
                     </div>
-                    <div className="col-md-5">
-                    <div className="card" style={{width: "18rem"}}>
+                    <div style={{width:"30%",marginLeft:"5%"}}>
+                    <div className="card" >
                         <img className="card-img-top" height="200px" src={image2} alt="Card image cap"/>
                         <div className="card-body">
                           <h5 className="card-title">Admin Dashboard</h5>
