@@ -14,7 +14,7 @@ import {
   Label,
 } from 'reactstrap';
 
- class FacultyProfileShow extends Component {
+ class FacultyShow extends Component {
 
   constructor(props){
     super(props)
@@ -30,7 +30,7 @@ import {
   }
 
   componentWillMount(){
-     var id=localStorage.getItem('user_id');
+     var id=this.props.match.params.id;
     this.props.profile(id);
 
   }
@@ -96,7 +96,7 @@ import {
                       <Label htmlFor="text-input">COMSATS Profile URL</Label>
                     </Col>
                     <Col xs="12" md="9">
-                    <a href={this.props.fprofile.profileLink} target="_blank">Click here to visit COMSATS Profile</a>
+                    <a href={this.props.fprofile.profileLink}>Click here to visit COMSATS Profile</a>
                     </Col>
                   </FormGroup>
                   <FormGroup row>
@@ -107,12 +107,8 @@ import {
                       </FormGroup>
                     </Col>
                   </FormGroup>
-                 
                 </Form>
               </CardBody>
-              <CardFooter>
-                <Button type="submit" size="sm" color="primary" onClick={this.onUpdate} ><i className="fa fa-dot-circle-o"></i> Update</Button>
-              </CardFooter>
             </Card>
         </div>
     );
@@ -128,4 +124,4 @@ const mapStateToProps = state => {
 const actionCreators = {
  profile:getpProfile,
 }
-export default connect(mapStateToProps,actionCreators)(FacultyProfileShow);
+export default connect(mapStateToProps,actionCreators)(FacultyShow);

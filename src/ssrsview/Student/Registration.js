@@ -250,6 +250,7 @@ class StudentResigtration extends Component {
                     </Col>
                     <Col xs="3" md="3" size="lg">
                       <Input type="select" name="sprogram" id="sprogram" bsSize="lg" onChange={this.onChange}>
+                      <option value="">Please Select a proram</option>
                        {this.state.programs.map((program,index)=>
                        <option key={index} value={program._id}>{program.name}</option>
                        )}

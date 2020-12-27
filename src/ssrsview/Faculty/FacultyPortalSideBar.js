@@ -52,7 +52,7 @@ class FacultySideBar extends Component {
                             </Link>
                         </NavItem>
                         <NavItem hidden={(supervisor==="true")?false:true}>
-                            <Link to={'/FacultyPortal/Synopsis'} className="nav-link"><i className="nav-icon icon-docs"></i> Synopsis </Link>
+                            <Link to={'/FacultyPortal/Synopsis'} className="nav-link"><i className="nav-icon icon-docs"></i> Assignment </Link>
                         </NavItem>
                         <NavItem hidden={(supervisor==="true")?false:true}>
                             <Link to={'/FacultyPortal/ReviewComments'} className="nav-link"><i className="nav-icon icon-people"></i> Review Comments </Link>

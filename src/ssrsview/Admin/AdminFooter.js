@@ -15,8 +15,8 @@ class AdminFooter extends Component {
 
     return (
       <React.Fragment>
-        <span><a href="https://coreui.io">Core</a> &copy; 2020 creativeLabs.</span>
-        <span className="ml-auto">Powered by <a href="https://coreui.io/react">Goverment Postgradute College Sheikhpura</a></span>
+        <span><a href="#">Smart Assignment Review System</a> &copy; 2020 .</span>
+        <span className="ml-auto">Powered by <a href="#">Univertsity College Dublin</a></span>  
       </React.Fragment>
     );
   }

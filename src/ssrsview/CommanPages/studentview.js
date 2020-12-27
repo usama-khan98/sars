@@ -1,42 +1,44 @@
-import React, { Component, lazy, Suspense } from 'react';
-import withAuth from '../withAuth';
-import { Card, CardBody, Form, FormGroup,Col,Label,CardFooter,Button } from 'reactstrap';
+import React, { Component, } from 'react';
 import axios from 'axios';
+import {
+    Card,
+    CardBody,
+    Col,
+    Form,
+    FormGroup,
+    Label,
+  } from 'reactstrap';
 
-class Profile extends Component {
 
-  constructor(props) {
-    super(props);
-    
-    this.state = {
-      student:{},
-      department:{},
-      program:{}
-    };
+class StudentShow extends Component {
 
-    this.onUpdate=this.onUpdate.bind(this);
-  }
+    constructor(props) {
+        super(props);
+        
+        this.state = {
+          student:{},
+          synopsis:{},
+          department:{},
+          program:{}
+        };
+      }
 
-  onUpdate(e){
-    this.props.history.replace('/StudentPortal/UpdateProfile');
-
-  }
-
-  componentWillMount(){
-    var id=localStorage.getItem('user_id');
-    axios.post('/api/student/getById',{sid:id})
-    .then(res=>{
-      console.log(res);
-      this.setState({
-        student:res.data.student,
-        department:res.data.student.Department[0],
-        program:res.data.student.Program[0]
-    })
-    })
-    .catch(err=>{
-      console.log(err);
-    })
-  }
+    componentWillMount(){
+        var id=this.props.match.params.id;
+        axios.post('/api/student/getById',{sid:id})
+        .then(res=>{
+            console.log(res.data);
+            this.setState({
+                student:res.data.student,
+                synopsis:res.data.student.Synopsis[0],
+                department:res.data.student.Department[0],
+                program:res.data.student.Program[0]
+            })
+        })
+        .catch(err=>{
+            console.log(err);
+        })
+    }
 
   render() {
 
@@ -120,9 +122,6 @@ class Profile extends Component {
                   </FormGroup>
                 </Form>
               </CardBody>
-              <CardFooter>
-                <Button type="submit" size="sm" color="primary" onClick={this.onUpdate} ><i className="fa fa-dot-circle-o"></i> Update</Button>
-              </CardFooter>
             </Card>
 
       </div>
@@ -130,4 +129,4 @@ class Profile extends Component {
   }
 }
 
-export default withAuth(Profile);
+export default StudentShow;

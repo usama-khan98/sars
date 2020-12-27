@@ -19,7 +19,7 @@ class SSRSFooter extends Component {
     return (
       <React.Fragment>
         <span><a href="#">Smart Assignment Review System</a> &copy; 2020 .</span>
-        <span className="ml-auto">Powered by <a href="#">Usama</a></span>  
+        <span className="ml-auto">Powered by <a href="#">Univertsity College Dublin</a></span>  
       </React.Fragment>
     );
   }

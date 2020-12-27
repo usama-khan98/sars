@@ -44,14 +44,14 @@ class StudentSideBar extends Component {
                         </NavItem>
                         <NavItem>
                             <Link to={'/StudentPortal/regSynopsis'} className="nav-link">
-                                <i className="nav-icon icon-graduation"></i> Register Synopsis
+                                <i className="nav-icon icon-graduation"></i> Register Assignment
                             </Link>
                         </NavItem>
                         <NavItem>
                             <Link to={'/StudentPortal/fileSynopsis'} className="nav-link"><i className="nav-icon icon-docs"></i>Upload File</Link>
                         </NavItem>
                         <NavItem>
-                            <Link to={'/StudentPortal/statusSynopsis'} className="nav-link"><i className="nav-icon icon-people"></i>Synopsis Status</Link>
+                            <Link to={'/StudentPortal/statusSynopsis'} className="nav-link"><i className="nav-icon icon-people"></i>Assignment Status</Link>
                         </NavItem>
                         <NavItem>
                             <Link to={'/StudentPortal/finalDecisions'} className="nav-link"><i className="nav-icon icon-hourglass"></i>Decisions</Link>

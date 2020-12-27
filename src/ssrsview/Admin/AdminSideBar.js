@@ -65,7 +65,7 @@ class Adminsidebar extends Component {
                             </Link>
                         </NavItem>
                         <NavItem>
-                            <Link to={'/AdminDashboard/synopsis'} className="nav-link"><i className="nav-icon icon-docs"></i> Synopses</Link>
+                            <Link to={'/AdminDashboard/synopsis'} className="nav-link"><i className="nav-icon icon-docs"></i> Assignment</Link>
                         </NavItem>
                         <NavItem>
                             <Link to={'/AdminDashboard/faculty'} className="nav-link"><i className="nav-icon icon-people"></i> Faculty</Link>

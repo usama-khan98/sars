@@ -102,7 +102,7 @@ class Dashboard extends Component {
         <Card style={{width:'90%',marginLeft:"5%",marginTop:'2%',}}>
           <CardHeader style={{textAlign:'center',backgroundColor:'#4591c3'}}>
           <h3>54</h3>
-          <h5>Synopses Registerd</h5>
+          <h5>Assignment Registerd</h5>
           </CardHeader>
         </Card>
         </div>
@@ -110,7 +110,7 @@ class Dashboard extends Component {
         <Card style={{width:'90%',marginLeft:"5%",marginTop:'2%',}}>
           <CardHeader style={{textAlign:'center',backgroundColor:'#3c3cc7'}}>
           <h3>13</h3>
-          <h5>Synopses UnderReview</h5>
+          <h5>Assignment UnderReview</h5>
           </CardHeader>
         </Card>
         </div>
@@ -118,7 +118,7 @@ class Dashboard extends Component {
         <Card style={{width:'90%',marginLeft:"5%",marginTop:'2%',}}>
           <CardHeader style={{textAlign:'center',backgroundColor:'green'}}>
           <h3>4</h3>
-          <h5>Synopses Reviewed</h5>
+          <h5>Assignment Reviewed</h5>
           </CardHeader>
         </Card>
         </div>
@@ -126,7 +126,7 @@ class Dashboard extends Component {
         <Card style={{width:'90%',marginLeft:"5%",marginTop:'2%',}}>
           <CardHeader style={{textAlign:'center',backgroundColor:'#d03f3f'}}>
           <h3>0</h3>
-          <h5>Synopses Presented</h5>
+          <h5>Assignment Presented</h5>
           </CardHeader>
         </Card>
         </div>
