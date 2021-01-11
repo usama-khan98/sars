@@ -58,7 +58,7 @@ class StudentResigtration extends Component {
   }
 
   onChangeReg(e){
-    var email=e.target.value+"@gmail.com";
+    var email=e.target.value+"@mytudublin.ie";
     this.setState({[e.target.name]: e.target.value,email:email});
   }
 
