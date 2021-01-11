@@ -243,6 +243,11 @@ export default class StudentHome extends Component {
               <br></br>
               <h5>Teacher Email:</h5>
               <h5 style={{color:'green'}}>{(this.state.supervisor)?this.state.supervisor.email:'NIL'}</h5>
+              <h5>Plagirism Report: </h5>
+              <div>
+                <div style={{width:'70%',float:'left'}}><Progress animated color="danger" value={(this.state.synopsis)?this.state.synopsis.plagirism:0} showValue className="mb-3" /></div>
+                <div style={{width:'20%',float:'right',marginLeft:'10px'}}>  {(this.state.synopsis)?this.state.synopsis.plagirism:0}%</div>
+              </div>
             </div>
             <div className="col-md-6">
             <br></br>
@@ -253,6 +258,7 @@ export default class StudentHome extends Component {
               <img src={nodataImage} width="80%" height="300px"></img>
             }
             </div>
+           
             
           </div>
           

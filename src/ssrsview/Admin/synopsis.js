@@ -57,6 +57,14 @@ class Synopsis extends Component {
                  "badge badge-primary":synopsis_list.status==="Presented"?
                  "badge badge-info":synopsis_list.status==="Approved"?"badge badge-success":"badge badge-light":"badge badge-danger"}>{synopsis_list.status}</span></td>
                  <td>
+                  <div style={{width:'70%',float:'left'}}>
+                    <Progress animated color="danger" value={(synopsis_list)?synopsis_list.plagirism:0} showValue className="mb-3" />
+                  </div>
+                  <div style={{width:'20%',float:'right',marginLeft:'10px'}}>
+                   {(synopsis_list)?synopsis_list.plagirism:0}%
+                  </div>
+                 </td>
+                 <td>
                 <Link to={'/AdminDashboard/synopsisShow/'+synopsis_list._id}>
                  <button type="button" onClick={this.toggleSuccess} class="btn btn-outline-primary" style={{marginRight:'10px'}}>
                     <i class="icon-eye"></i>
@@ -107,6 +115,7 @@ class Synopsis extends Component {
                 <th scope="col">Research Field</th>
                 <th scope="col">Supervisor</th>
                 <th scope="col">Status</th>
+                <th scope="col">Plagiarism</th>
                 <th scope="col">Action</th>
               </tr>
             </thead>

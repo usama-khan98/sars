@@ -14,6 +14,7 @@ import ReviewComments from './reviewComments';
 import ReviewTask from './reviewTask';
 import Student from './students';
 import SubmitReviewForm from './submitReviewComment';
+import SynopsisShow from '../CommanPages/synopsisview';
 import Synopsis from './synopses';
 import AuthService from '../AuthTest';
 import { BrowserRouter as Router, Switch,Route,Redirect } from 'react-router-dom';
@@ -73,6 +74,7 @@ class FacultyPortal extends Component {
                 <Route  path="/FacultyPortal/Student" name="Faculty Portal Home Page" component={Student} />
                 <Route  path="/FacultyPortal/SubmitReviewForm/:taskId/:synopsisId" name="Faculty Portal Home Page" component={SubmitReviewForm} />
                 <Route  path="/FacultyPortal/Synopsis" name="Faculty Portal Home Page" component={Synopsis} />
+                <Route  path="/FacultyPortal/ViewSynopsis/:id" name="Faculty Portal Home Page" component={SynopsisShow} />
                 <Redirect from='/FacultyPortal' to='/FacultyPortal/Home'/>
               </Switch>
               </main>

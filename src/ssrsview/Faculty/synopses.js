@@ -65,6 +65,14 @@ class Synopsis extends Component {
                  <td>{(synopsis.student===null)?'':synopsis.student.regNumber}</td>
                  <td ><span className="badge badge-success">{synopsis.status}</span></td>
                  <td>
+                  <div style={{width:'70%',float:'left'}}>
+                    <Progress animated color="danger" value={(synopsis)?synopsis.plagirism:0} showValue className="mb-3" />
+                  </div>
+                  <div style={{width:'20%',float:'right',marginLeft:'10px'}}>
+                   {(synopsis)?synopsis.plagirism:0}%
+                  </div>
+                 </td>
+                 <td>
                  <Link to={'/FacultyPortal/ViewSynopsis/'+synopsis._id}>
                     <button type="button" onClick={this.toggleSuccess} class="btn btn-outline-primary" style={{marginRight:'10px'}}>
                       <i class="icon-eye"></i>
@@ -110,6 +118,7 @@ class Synopsis extends Component {
                 <th scope="col">Student Name</th>
                 <th scope="col">Student Reg#</th>
                 <th scope="col">Status</th>
+                <th scope="col">Plagirism</th>
                 <th scope="col">Action</th>
               </tr>
             </thead>

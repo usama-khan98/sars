@@ -48,7 +48,7 @@ class FacultyHeader extends Component {
           full={{ src: logo, width: 40, height: 30, alt: 'CoreUI Logo' }}
           minimized={{ src: sygnet, width: 30, height: 30, alt: 'CoreUI Logo' }} style={{width:'80px'}}
         />
-        <h2 style={{marginTop:'10px',color:'#3a3a56'}}><strong>SSRS</strong></h2>
+        <h2 style={{marginTop:'10px',color:'#3a3a56'}}><strong>SARS</strong></h2>
         <AppSidebarToggler className="d-md-down-none" display="lg" />
 
         <Nav className="d-md-down-none" navbar>

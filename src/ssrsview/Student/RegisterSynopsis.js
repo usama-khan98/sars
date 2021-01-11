@@ -43,7 +43,7 @@ class RegisterSynopsis extends Component {
       title:this.state.title,
       studentId:this.state.student._id,
       supervisorId:this.state.supervisor,
-      co_supervisorID:this.state.cosupervisor,
+      // co_supervisorID:this.state.cosupervisor,
       researchField:this.state.field
     }
 
@@ -56,21 +56,21 @@ class RegisterSynopsis extends Component {
       axios.post('/api/admin/Notify',
       {
         userId:'5e26ca6014e0a32fa3834fcd',
-        subject: "Student with Reg# "+this.state.regNo+" Register Synopsis having title"+this.state.title,
+        subject: "Student with Reg# "+this.state.regNo+" Register Assignment having title"+this.state.title,
         status:"unreaded"
       })
       .then(result=>{
         axios.post('/api/admin/Notify',
       {
         userId:this.state.supervisor,
-        subject: "Student with Reg# "+this.state.regNo+" Register Synopsis having title"+this.state.title,
+        subject: "Student with Reg# "+this.state.regNo+" Register Assignment having title"+this.state.title,
         status:"unreaded"
       })
       .then(result=>{
         axios.post('/api/admin/Notify',
       {
         userId:this.state.cosupervisor,
-        subject: "Student with Reg# "+this.state.regNo+" Register Synopsis having title \""+this.state.title+"\"",
+        subject: "Student with Reg# "+this.state.regNo+" Register Assignment having title \""+this.state.title+"\"",
         status:"unreaded"
       })
       .then(result=>{
@@ -174,7 +174,7 @@ class RegisterSynopsis extends Component {
                         </FormGroup>
                         <br></br>
                         <br></br>
-                        <FormGroup row>
+                        {/* <FormGroup row>
                           <Col md="5">
                             <Label htmlFor="text-input">Teacher 2</Label>
                           </Col>
@@ -187,7 +187,7 @@ class RegisterSynopsis extends Component {
                             )}
                             </Input>
                           </Col>
-                        </FormGroup>
+                        </FormGroup> */}
                         <br></br>
                         <br></br>
                         <FormGroup row>
@@ -196,7 +196,7 @@ class RegisterSynopsis extends Component {
                           </Col>
                           <Col xs="12" md="6">
                             <Input type="text" value={(this.state.synopsis)?this.state.synopsis.title:this.state.title} 
-                            id="title" name="title" placeholder="Please enter Synopsis Title"
+                            id="title" name="title" placeholder="Please enter Assignment Title"
                             onChange={this.onChange} disabled={(this.state.synopsis)?true:false}/>
                           </Col>
                         </FormGroup>

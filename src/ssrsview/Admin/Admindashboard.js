@@ -25,6 +25,7 @@ import FacultyRegistration from './facultyRegistrationForm';
 import ReviewTaskForm from './ReviewTaskForm';
 import AddDecisionForm from './adddecisionform';
 import CommentsAnalysis from './commentsAnalysisForm';
+import SynopsisShow from '../CommanPages/synopsisview'
 
 const propTypes = {
   children: PropTypes.node,
@@ -75,6 +76,7 @@ class AdminDashboard extends Component {
                 <Route  path="/AdminDashboard/comments" name="Review Comments"  component={ReviewComments} />
                 <Route  path="/AdminDashboard/decisions" name="Synopsis Decision"  component={SynopsisDecisions} />
                 <Route  path="/AdminDashboard/decisionsform/:synosisid" name="Synopsis Decision Form"  component={AddDecisionForm} />
+                <Route  path="/AdminDashboard/synopsisShow/:id" name="Synopsis Decision Form"  component={SynopsisShow} />
                 <Route  path="/AdminDashboard/commentsAnalysis/:synosisid" name="Synopsis CommentsAnalysis Form"  component={CommentsAnalysis} />
                 <Route  path="/AdminDashboard/presentations" name="Prsentation" component={Presentation} />
                 <Route  path="/AdminDashboard/reports" name="Reports"  component={Reports} />

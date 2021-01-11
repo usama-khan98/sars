@@ -130,7 +130,7 @@ class SynopsisUpload extends Component {
                         <FormGroup row>
                           <Col xs="12" md="11">
                           <Button color="ghost-success" style={{float:'right'}} onClick={this.onSubmit}
-                           disabled={(this.state.Synopsis.status==="Registered")?false:true}
+                           disabled={(this.state.Synopsis.status==="Registered" || this.state.Synopsis.status==="Registering")?false:true}
                            hidden={(this.state.Synopsis.status==="ReSubmit")?true:false}>
                               Upload Assignment
                           </Button>

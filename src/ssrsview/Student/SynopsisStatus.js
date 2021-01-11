@@ -238,6 +238,11 @@ export default class SynopsisStatus extends Component {
               <br></br>
               <h5>Status:</h5>
               <h5 style={{color:'green'}}>{(this.state.synopsis)?this.state.synopsis.status:"Please Register First"}</h5>
+              <h5>Plagirism Report: </h5>
+              <div>
+                <div style={{width:'78%',float:'left'}}><Progress animated color="danger" value={(this.state.synopsis)?this.state.synopsis.plagirism:0} showValue className="mb-3" /></div>
+                <div style={{width:'20%',float:'right',marginLeft:'10px'}}>{(this.state.synopsis)?this.state.synopsis.plagirism:0}%</div>
+              </div>
             </div>
             <div className="col-md-6">
             <br></br>

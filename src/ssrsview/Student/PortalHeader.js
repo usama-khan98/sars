@@ -52,7 +52,7 @@ class StudentHeader extends Component {
           style={{ width: "80px" }}
         />
         <h2 style={{ marginTop: "10px", color: "#3a3a56" }}>
-          <strong>SSRS</strong>
+          <strong>SARS</strong>
         </h2>
         <AppSidebarToggler className="d-md-down-none" display="lg" />
 

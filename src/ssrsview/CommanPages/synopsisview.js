@@ -1,6 +1,6 @@
 import React, { Component, lazy, Suspense } from 'react';
 import withAuth from '../withAuth';
-import { Card, CardBody, Form, FormGroup,Label,Col } from 'reactstrap';
+import { Card, CardBody, Form, FormGroup,Label,Col,Progress } from 'reactstrap';
 import * as am4core from "@amcharts/amcharts4/core";
 import * as am4charts from "@amcharts/amcharts4/charts";
 import axios from 'axios';
@@ -267,6 +267,16 @@ class SynopsisShow extends Component {
                         "badge badge-secondary":this.state.synopsis.status==="Revised"?
                         "badge badge-primary":this.state.synopsis.status==="Presented"?
                         "badge badge-info":this.state.synopsis.status==="Approved"?"badge badge-success":"badge badge-light":"badge badge-danger"}>{this.state.synopsis.status}</span></h5>
+
+                    </Col>
+                </FormGroup>
+                <FormGroup row>
+                    <Col md="3">
+                      <Label htmlFor="text-input">Plagirism Report</Label>
+                    </Col>
+                    <Col xs="12" md="9" >
+                    <div style={{width:'78%',float:'left'}}><Progress animated color="danger" value={(this.state.synopsis)?this.state.synopsis.plagirism:0} showValue className="mb-3" /></div>
+                    <div style={{width:'20%',float:'right',marginLeft:'10px'}}>{(this.state.synopsis)?this.state.synopsis.plagirism:0}%</div>
 
                     </Col>
                 </FormGroup>
